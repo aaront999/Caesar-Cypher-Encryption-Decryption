@@ -1,6 +1,6 @@
 # Caesar cipher Encryption/Decryption Project 
 
-text = "Curia di Pompeo, Rome"
+text = input("Type in a text to encrypt: ")
 shiftByThree = 3
 
 def CaesarCypher(input, shift):
@@ -17,19 +17,19 @@ def CaesarCypher(input, shift):
             if is_upper:
                 encrypt_char = encrypt_char.upper()  # Preserve original case
             result += encrypt_char
-    
+
     return result
 
 # Defining encrypt/decrypt function for better readability
 def encrypt(message):
     return CaesarCypher(message, shiftByThree)
-    
+
 def decrypt(message):
     return CaesarCypher(message, -shiftByThree)
 
 # test cases
 # output results for ENCRYPTION
-print(f'Decrypted text: {text}')
+print(f'\nDecrypted text: {text}')
 print('_________________________')
 encryption = encrypt(text)
 print(f'encryption: {encryption}\n')
